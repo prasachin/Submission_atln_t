@@ -14,6 +14,10 @@ const SideBar = () => {
         </h5>
         {queryHistory && <Query type="saved" />}
       </div>
+      <p className="note text-2 pt-6 mb-0">
+        <strong>NOTE:</strong> Use Above Query to directly inject in the Editor
+        to get results.
+      </p>
     </div>
   );
 };

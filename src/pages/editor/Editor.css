@@ -1,5 +1,3 @@
-/* Extra CSS */
-
 * {
   margin: 0%;
   padding: 0%;
@@ -22,8 +20,6 @@ body {
   overflow: auto;
 }
 
-/* Sidebar */
-
 .sidebar {
   border-radius: 6px;
   margin: 1rem 1rem 1rem 1rem;
@@ -38,7 +34,13 @@ body {
   overflow: hidden;
 }
 .sidebar-item {
-  height: 42.5vh;
+  height: 55vh;
+}
+.sidebar-item {
+  height: 85vh;
+}
+.note {
+  padding-top: 40px;
 }
 .sidebar .placeholder-text {
   font-size: 1.5rem;
@@ -111,7 +113,6 @@ div.sidebar-item:nth-child(2) {
 .query-results {
   padding: 0.5rem 1rem;
   overflow: clip;
-  /* height: 90vh; */
 }
 .query-details {
   display: flex;
@@ -122,7 +123,7 @@ div.sidebar-item:nth-child(2) {
 .query-details .export-btn button {
   background-color: transparent;
   border: none;
-  color: #00254A;
+  color: #00254a;
 }
 .query-details p {
   margin: 0%;
@@ -142,7 +143,6 @@ th {
 
 .query-table {
   margin: 0rem 1.5rem 1rem 0rem;
-  /* width: 100%; */
   height: 72vh;
   overflow: auto;
 }
@@ -156,7 +156,6 @@ th {
 .query-results .tabs {
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
-  /* margin-bottom: 1rem; */
 }
 .query-results .tab-bar {
   margin-bottom: 1rem;
@@ -170,7 +169,7 @@ th {
   border-radius: 6px 6px 0px 0px;
 }
 .query-wrapper {
-  max-height: 35vh;
+  max-height: 55vh;
   overflow: auto;
 }
 .query {
@@ -212,7 +211,7 @@ th {
 }
 
 code {
-  color: var(--atlan) !important;
+  color: black !important;
 }
 
 @media (max-width: 768px) {

@@ -1,46 +1,34 @@
 import { useContext } from "react";
 import MainContext from "../../../MainContext";
-import {
-  queryDataAlt as queryData,
-  queryData2,
-} from "../../../assets/data/data";
+import { Customers } from "../../../assets/data/data";
+import toast from "react-hot-toast";
+import executeQuery from "../../../utils/ExecuteQuery";
 
-const EditorPanel = () => {
+const EditorPanel = ({ onRun }) => {
   const { query, setQueryHistory, setQuery } = useContext(MainContext);
 
   const handleRunQuery = () => {
-    if (!query.trim()) {
-      alert("Query cannot be empty. Please enter a valid SQL query.");
+    if (onRun) {
+      onRun();
       return;
     }
-    if (query === "SELECT * FROM internetData;") {
-      setQueryHistory((prev) => ({ ...prev, outputData: queryData }));
-    } else if (
-      query === "SELECT id, first_name, last_name FROM internetData;"
-    ) {
-      setQueryHistory((prev) => ({ ...prev, outputData: queryData2 }));
-    } else {
-      alert("Invalid query. Try a test query.");
-    }
-    setQueryHistory((prev) => ({
-      ...prev,
-      history: [...prev.history, query],
-    }));
   };
 
   const handleSaveQuery = () => {
     if (!query.trim()) {
-      alert("Cannot save an empty query.");
+      toast.error("Cannot save an empty query.");
       return;
     }
     setQueryHistory((prev) => ({
       ...prev,
       saved: [...prev.saved, query],
     }));
+    toast.success("Query Saved Succesfully.");
   };
 
   const handleClearQuery = () => {
     setQuery("");
+    toast.success("Editor Cleared!");
   };
 
   return (

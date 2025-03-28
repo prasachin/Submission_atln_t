@@ -2,6 +2,7 @@ import { Suspense, lazy, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Loader from "./components/loader/Loader";
+import { Toaster } from "react-hot-toast";
 
 const Home = lazy(() => import("./pages/home/Home"));
 const Navbar = lazy(() => import("./components/navbar/Navbar"));
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App" id={`${darkMode ? `dark` : `light`}-mode`}>
       <Suspense fallback={<Loader />}>
+        <Toaster />
         <Router>
           <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
           <Routes>

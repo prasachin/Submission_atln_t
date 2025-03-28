@@ -8,13 +8,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 
 function Editor() {
-  const [query, setQuery] = useState("SELECT * FROM internetData;");
+  const [query, setQuery] = useState("SELECT * FROM Customers;");
   const [queryHistory, setQueryHistory] = useState({
     saved: [
-      "SELECT * FROM internetData;",
-      "SELECT id, first_name, last_name FROM internetData;",
+      "SELECT * FROM Customers;",
+      "SELECT customerID, companyName, country FROM Customers;",
+      "SELECT * FROM Customers WHERE country = 'Germany';",
+      "SELECT * FROM Customers ORDER BY companyName ASC;",
+      "SELECT customerID, companyName FROM Customers ORDER BY city DESC;",
+      "SELECT customerID, companyName FROM Customers;",
     ],
-    history: ["SELECT * FROM internetData;"],
+    history: ["SELECT * FROM Customers;"],
     outputData: [],
   });
 
