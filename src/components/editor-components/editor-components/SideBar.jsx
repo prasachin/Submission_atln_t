@@ -14,13 +14,6 @@ const SideBar = () => {
         </h5>
         {queryHistory && <Query type="saved" />}
       </div>
-      <div className="sidebar-item">
-        <h5>
-          <span className="fa fa-undo secondary me-2"></span>{" "}
-          <span className="text-1">History</span>
-        </h5>
-        {queryHistory && <Query type="history" />}
-      </div>
     </div>
   );
 };

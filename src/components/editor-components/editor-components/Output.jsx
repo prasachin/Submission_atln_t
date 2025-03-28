@@ -45,7 +45,7 @@ const Output = () => {
                 filename={"dataOutput.csv"}
               >
                 <button>
-                  Export <span className="fa fa-download"></span>
+                  Export .csv<span className="fa fa-download"></span>
                 </button>
               </CSVLink>
             </div>

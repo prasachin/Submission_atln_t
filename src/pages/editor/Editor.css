@@ -70,13 +70,17 @@ div.sidebar-item:nth-child(2) {
   border-radius: 6px;
   background: whitesmoke;
   margin: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 .CodeMirror {
   border: 2px solid whitesmoke;
 }
 .editor-panel {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .btn {
   width: 150px;
@@ -91,7 +95,7 @@ div.sidebar-item:nth-child(2) {
 }
 .primary-btn button {
   color: var(--white);
-  background: #00254A;
+  background: #00254a;
   border: none;
 }
 .secondary-btn button {
@@ -118,7 +122,7 @@ div.sidebar-item:nth-child(2) {
 .query-details .export-btn button {
   background-color: transparent;
   border: none;
-  color: var(--atlan);
+  color: #00254A;
 }
 .query-details p {
   margin: 0%;
@@ -162,7 +166,7 @@ th {
 }
 .query-results .tabs.active {
   color: var(--white);
-  background-color: var(--atlan);
+  background-color: #00254a;
   border-radius: 6px 6px 0px 0px;
 }
 .query-wrapper {

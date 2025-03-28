@@ -4,9 +4,8 @@ const getTableRowsFromData = (arr) => {
     return (
       <tr key={i.id}>
         {" "}
-        {/* Assuming 'id' is a unique key for each row */}
         {keys.map((a) => {
-          return <td key={a}>{i[a]}</td>; // Added 'key' to each td for better performance and uniqueness
+          return <td key={a}>{i[a]}</td>; 
         })}
       </tr>
     );
@@ -18,7 +17,7 @@ const getTableHeadFromData = (arr) => {
   return (
     <tr>
       {keys.map((i) => {
-        return <th key={i}>{i}</th>; // Use <th> for table header cells
+        return <th key={i} style={{backgroundColor:"#00254A"}}>{i}</th>;
       })}
     </tr>
   );
@@ -28,7 +27,7 @@ const getTableColumns = (arr) => {
   const keys = Object.keys(arr[0]);
   return keys.map((i) => {
     return (
-      <th key={i}>{i}</th> // Render each column name as <th> in the header
+      <th key={i}>{i}</th>
     );
   });
 };
