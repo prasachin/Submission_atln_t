@@ -47,3 +47,18 @@ The Screenshots of the Performance are given below:
 
 # Functionality
 To keep the user interactive I used some animations.But as told in the task I don't need to focus much on the UI part.
+
+![Screenshot 2025-03-29 233321](https://github.com/user-attachments/assets/7b988ab4-5aea-4ce4-9d37-acd2c6f16f62)
+![Screenshot 2025-03-29 233347](https://github.com/user-attachments/assets/5eaaae08-c932-42af-8681-80fd2cc445bb)
+![Screenshot 2025-03-29 233426](https://github.com/user-attachments/assets/6f419d1f-3505-450c-a774-1963bc74782f)
+![Screenshot 2025-03-29 233441](https://github.com/user-attachments/assets/aca8771e-891f-45ca-a0ef-474ee69c49da)
+![Screenshot 2025-03-29 233854](https://github.com/user-attachments/assets/4d5ccc5c-c008-4e0d-a166-a92f8ed8dbbd)
+![Screenshot 2025-03-29 233903](https://github.com/user-attachments/assets/ca40fcde-d6f5-4357-8c00-464d7307ed63)
+![Screenshot 2025-03-29 233943](https://github.com/user-attachments/assets/0c399a05-18c2-42a5-b872-28af3d83430e)
+![Screenshot 2025-03-29 234033](https://github.com/user-attachments/assets/fd8665b0-b2c5-4c14-af4f-d6bbc12395ca)
+![Screenshot 2025-03-29 234134](https://github.com/user-attachments/assets/b04c9e21-7626-4b47-869b-bc912ba1c8b6)
+![Screenshot 2025-03-29 234302](https://github.com/user-attachments/assets/a1c12569-765a-4399-81ac-625083b05fe3)
+![Screenshot 2025-03-29 234332](https://github.com/user-attachments/assets/4dd417f2-972e-41bb-af6c-2e41c7466b57)
+![Screenshot 2025-03-29 234952](https://github.com/user-attachments/assets/21822a44-c059-4c77-8b80-25a21c295bd8)
+![Screenshot 2025-03-29 235014](https://github.com/user-attachments/assets/a1a48a7f-00bb-4c15-9c09-3cf257224047)
+![Screenshot 2025-03-29 235625](https://github.com/user-attachments/assets/b4129163-cf05-4fd6-bece-578995ee90d2)
