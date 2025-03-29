@@ -18,24 +18,22 @@ const Home = () => {
       link: "/about",
     },
     {
-      title: "Vist GitHub",
+      title: "Visit GitHub",
       description: "Suggest your opinion and Learn together.",
       link: "https://github.com/prasachin",
     },
   ];
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
+  const handleSlideChange = (direction) => {
+    setCurrentIndex((prevIndex) =>
+      direction === "next"
+        ? (prevIndex + 1) % slides.length
+        : (prevIndex - 1 + slides.length) % slides.length
     );
   };
 
   useEffect(() => {
-    const interval = setInterval(handleNext, 5000);
+    const interval = setInterval(() => handleSlideChange("next"), 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -61,10 +59,16 @@ const Home = () => {
             </div>
           ))}
         </div>
-        <button className="carousel-button left" onClick={handlePrev}>
+        <button
+          className="carousel-button left"
+          onClick={() => handleSlideChange("prev")}
+        >
           ◀
         </button>
-        <button className="carousel-button right" onClick={handleNext}>
+        <button
+          className="carousel-button right"
+          onClick={() => handleSlideChange("next")}
+        >
           ▶
         </button>
       </div>

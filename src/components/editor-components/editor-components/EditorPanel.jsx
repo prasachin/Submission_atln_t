@@ -1,41 +1,34 @@
-import { useContext } from "react";
+import { useContext, useCallback } from "react";
 import MainContext from "../../../MainContext";
-import { Customers } from "../../../assets/data/data";
 import toast from "react-hot-toast";
-import executeQuery from "../../../utils/ExecuteQuery";
 
 const EditorPanel = ({ onRun }) => {
-  const { query, setQueryHistory, setQuery } = useContext(MainContext);
+  const { query, setQuery, setQueryHistory } = useContext(MainContext);
 
-  const handleRunQuery = () => {
-    if (onRun) {
-      onRun();
-      return;
-    }
-  };
-
-  const handleSaveQuery = () => {
+  const handleSaveQuery = useCallback(() => {
     if (!query.trim()) {
       toast.error("Cannot save an empty query.");
       return;
     }
+
     setQueryHistory((prev) => ({
       ...prev,
       saved: [...prev.saved, query],
     }));
-    toast.success("Query Saved Succesfully.");
-  };
 
-  const handleClearQuery = () => {
+    toast.success("Query saved successfully.");
+  }, [query, setQueryHistory]);
+
+  const handleClearQuery = useCallback(() => {
     setQuery("");
-    toast.success("Editor Cleared!");
-  };
+    toast.success("Editor cleared!");
+  }, [setQuery]);
 
   return (
     <div className="editor-panel">
       <button
         className="btn primary-btn"
-        onClick={handleRunQuery}
+        onClick={onRun}
         style={{ backgroundColor: "green", color: "white", margin: "10px" }}
       >
         <span className="fa fa-play me-1"></span>Run

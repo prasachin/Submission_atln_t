@@ -3,38 +3,36 @@ import MainContext from "../../../MainContext";
 import ColumnDetails from "./ColumnDetails";
 import Table from "./Table";
 import { CSVLink } from "react-csv";
-
+import toast from "react-hot-toast";
 const Output = () => {
   const [tab, setTab] = useState(0);
   const { queryHistory } = useContext(MainContext);
+
+  const renderContent = () => {
+    if (tab === 0) return <Table result={queryHistory.outputData} />;
+    return <ColumnDetails result={queryHistory.outputData} />;
+  };
 
   return (
     <div className="query-results">
       {queryHistory.outputData.length > 0 ? (
         <>
           <div className="tab-bar">
-            <span
-              className={`tabs ${tab === 0 ? "active" : ""} cursor-pointer`}
-              onClick={() => setTab(0)}
-            >
-              Output
-            </span>
-            <span
-              className={`tabs ${tab === 1 ? "active" : ""} cursor-pointer`}
-              onClick={() => setTab(1)}
-            >
-              Table Data
-            </span>
+            {["Output", "Table Data"].map((label, index) => (
+              <span
+                key={index}
+                className={`tabs ${
+                  tab === index ? "active" : ""
+                } cursor-pointer`}
+                onClick={() => setTab(index)}
+              >
+                {label}
+              </span>
+            ))}
           </div>
           <div className="query-details">
             <p className="text-2">
-              Showing{" "}
-              <span>
-                {tab === 0
-                  ? queryHistory.outputData.length
-                  : Object.keys(queryHistory.outputData[0]).length}
-              </span>{" "}
-              rows in Set{" "}
+              Showing <span>{queryHistory.outputData.length}</span> rows in Set{" "}
               <span style={{ fontSize: "0.9rem" }} className="text-1">
                 (0.03sec)
               </span>
@@ -43,18 +41,18 @@ const Output = () => {
               <CSVLink
                 data={queryHistory.outputData}
                 filename={"dataOutput.csv"}
+                onClick={() => {
+                  toast.success("The .csv file downloaded succusfully.");
+                }}
               >
                 <button>
-                  Export .csv<span className="fa fa-download"></span>
+                  Export .csv
+                  <span className="fa fa-download"></span>
                 </button>
               </CSVLink>
             </div>
           </div>
-          {tab === 0 ? (
-            <Table result={queryHistory.outputData} />
-          ) : (
-            <ColumnDetails result={queryHistory.outputData} />
-          )}
+          {renderContent()}
         </>
       ) : (
         <div className="placeholder-text">

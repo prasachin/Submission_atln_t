@@ -1,17 +1,15 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import MainContext from "../../../MainContext";
 
 const Query = ({ type }) => {
   const { setQuery, queryHistory } = useContext(MainContext);
   const [searchQuery, setSearchQuery] = useState("");
-  const [list, setList] = useState(queryHistory[type]);
+  const [filteredQueries, setFilteredQueries] = useState(
+    queryHistory[type] || []
+  );
 
   useEffect(() => {
-    setList(queryHistory[type]);
-  }, [type, queryHistory]);
-
-  useEffect(() => {
-    setList(
+    setFilteredQueries(
       queryHistory[type].filter((query) =>
         query.toLowerCase().includes(searchQuery.toLowerCase())
       )
@@ -27,10 +25,14 @@ const Query = ({ type }) => {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
       </div>
-      {list.length > 0 ? (
-        list.map((query, index) => (
-          <div key={index} className="cursor-pointer query">
-            <code onClick={() => setQuery(query)}>{query}</code>
+      {filteredQueries.length > 0 ? (
+        filteredQueries.map((query, index) => (
+          <div
+            key={index}
+            className="cursor-pointer query"
+            onClick={() => setQuery(query)}
+          >
+            <code>{query}</code>
           </div>
         ))
       ) : (

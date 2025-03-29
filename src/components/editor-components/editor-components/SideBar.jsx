@@ -9,7 +9,7 @@ const SideBar = () => {
     <div className="sidebar">
       <div className="sidebar-item">
         <h5>
-          <span className="fa fa-cloud secondary me-2"></span>{" "}
+          <span className="fa fa-cloud secondary me-2"></span>
           <span className="text-1">Available Queries</span>
         </h5>
         {queryHistory && <Query type="saved" />}

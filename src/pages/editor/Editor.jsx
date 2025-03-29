@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 
 function Editor() {
+  // State for query and query history
   const [query, setQuery] = useState("SELECT * FROM Customers;");
   const [queryHistory, setQueryHistory] = useState({
     saved: [
@@ -22,8 +23,14 @@ function Editor() {
     outputData: [],
   });
 
+  // Memoize context value to prevent unnecessary re-renders
   const contextValue = useMemo(
-    () => ({ query, setQuery, queryHistory, setQueryHistory }),
+    () => ({
+      query,
+      setQuery,
+      queryHistory,
+      setQueryHistory,
+    }),
     [query, queryHistory]
   );
 
