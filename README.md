@@ -25,10 +25,25 @@ For the Performance and Optimisation analysis, I have used Google's <strong>Ligh
 The Screenshots of the Performance are given below:
 <br/>
 ### 1. Homepage
-![Screenshot 2025-03-30 003331](https://github.com/user-attachments/assets/3438e1ef-3820-4e25-b36b-11693e81bded)
+# Desktop
+![Screenshot 2025-03-30 003331](https://github.com/user-attachments/assets/3438e1ef-3820-4e25-b36b-11693e81bded)<br/>
+# Mobile
 ![Screenshot 2025-03-30 003436](https://github.com/user-attachments/assets/4ad28447-d6f8-45dd-8efe-e2e4d646812f)
 
 ### 2. Editor Page 
-![Screenshot 2025-03-30 003107](https://github.com/user-attachments/assets/b70901a1-998f-4847-8646-d31d7364568a)
+# Desktop
+![Screenshot 2025-03-30 003107](https://github.com/user-attachments/assets/b70901a1-998f-4847-8646-d31d7364568a)<br/>
+# Mobile
+![Screenshot 2025-03-30 003247](https://github.com/user-attachments/assets/1b08c774-a208-4316-a27a-cd52041fab87)<br/>
 
-![Screenshot 2025-03-30 003247](https://github.com/user-attachments/assets/1b08c774-a208-4316-a27a-cd52041fab87)
+## How optimized the performance 
+* Used <strong> React.memo </strong>: Basically a higher order component that prevents unnecessary re-renders of the component.
+* Used <strong>React.lazy and React.Suspense</strong> to load the components only when they are required.   
+* Used <strong>React Router</strong> to load the components only when they are required.
+* Used <strong>React-ace</strong> for the SQL editor, which is a lightweight library that provides a simple and easy to use SQL editor.
+* Used <strong>useCallback</strong> to memoize the functions that are passed as props to the components.Whereever possible.
+* Used <strong>useMemo</strong> to memoize the values that are passed as props to the components. Whereever possible.
+* Used <strong>useEffect</strong> to load the data only when the component is mounted.<br/>
+
+# Functionality
+To keep the user interactive I used some animations.But as told in the task I don't need to focus much on the UI part.
