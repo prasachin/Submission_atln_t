@@ -25,5 +25,6 @@ For the Performance and Optimisation analysis, I have used Google's <strong>Ligh
 The Screenshots of the Performance are given below:
 <br/>
 ### 1. Homepage
-
+![Screenshot 2025-03-30 003331](https://github.com/user-attachments/assets/3438e1ef-3820-4e25-b36b-11693e81bded)
+![Screenshot 2025-03-30 003436](https://github.com/user-attachments/assets/4ad28447-d6f8-45dd-8efe-e2e4d646812f)
 
