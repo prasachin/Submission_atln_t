@@ -28,3 +28,7 @@ The Screenshots of the Performance are given below:
 ![Screenshot 2025-03-30 003331](https://github.com/user-attachments/assets/3438e1ef-3820-4e25-b36b-11693e81bded)
 ![Screenshot 2025-03-30 003436](https://github.com/user-attachments/assets/4ad28447-d6f8-45dd-8efe-e2e4d646812f)
 
+### 2. Editor Page 
+![Screenshot 2025-03-30 003107](https://github.com/user-attachments/assets/b70901a1-998f-4847-8646-d31d7364568a)
+
+![Screenshot 2025-03-30 003247](https://github.com/user-attachments/assets/1b08c774-a208-4316-a27a-cd52041fab87)
