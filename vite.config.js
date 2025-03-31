@@ -11,4 +11,7 @@ export default defineConfig({
   optimizeDeps: {
     include: ["react-csv"],
   },
+  build: {
+    target: 'es2020' // Force ES2020 output
+  },
 });
