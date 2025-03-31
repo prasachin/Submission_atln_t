@@ -6,12 +6,30 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: ["react"],
+      // Force JavaScript version of Rollup
+      plugins: [
+        {
+          name: "disable-rollup-native",
+          resolveId(source) {
+            if (source === "native") return false;
+          },
+        },
+      ],
     },
+    target: "es2020",
   },
   optimizeDeps: {
     include: ["react-csv"],
-  },
-  build: {
-    target: 'es2020' // Force ES2020 output
+    // Disable esbuild for dependencies that cause issues
+    esbuildOptions: {
+      plugins: [
+        {
+          name: "disable-native",
+          setup(build) {
+            build.onResolve({ filter: /^native$/ }, () => ({ path: false }));
+          },
+        },
+      ],
+    },
   },
 });
