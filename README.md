@@ -1,5 +1,5 @@
 # Task given by Atlan after Assessment round for the Frontend intern position.
-<strong> Link to the application:</strong>
+<strong> Link to the application:https://submission-sachin-prakashs-projects.vercel.app/</strong>
 <br>
 ## Introduction
 The given application is developed as a task for Atlan. It enables users to run SQL queries in an online editor, and analyze the output obtained as a result of running the queries.
@@ -11,7 +11,9 @@ The data used in the task is obtained from the website suggested in the task, wh
 ## Work-flow
 The application is a simple SQL editor that allows users to run SQL queries on the data provided. The application has been built using React and uses the following libraries:<br/>
 * react-ace - for the SQL editor <br/>
-* react-csv - for downloading the data in CSV format<br/>
+* papaparse - for downloading the data in CSV format<br/>
+* file-saver - for saving the csv file<br/>
+* react-hot-toast - for providing inteeractive notification<br/>
 * react-router-dom - for routing(It ensures that the application is a single page application)<br/>
 * react-dom - for rendering the application<br/>
 * ace-builds - for the SQL editor<br/>
