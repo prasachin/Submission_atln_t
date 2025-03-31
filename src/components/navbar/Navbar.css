@@ -4,9 +4,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  /* height: 4rem; */
   height: 10vh;
-  /* transition: all 0.6s; */
   overflow: hidden;
   display: grid;
   place-items: center;
@@ -86,22 +84,10 @@ nav.scrolled .nav-links {
   text-decoration: none;
 }
 
-.nav-link-original .underline {
-  position: absolute;
-  bottom: -0.25rem;
-  left: 0;
-  width: 0%;
-  height: 0.12rem;
-  background-color: var(--primary);
-  transition: all 0.5s;
-}
+
 
 .nav-link-original:hover {
   color: blue;
-}
-
-.nav-link-original:hover .underline {
-  width: 100%;
 }
 
 #nav-menu-icon.nav-menu-icon {

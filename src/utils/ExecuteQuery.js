@@ -1,12 +1,8 @@
 const executeQuery = (query, data) => {
   try {
     const lowerQuery = query.toLowerCase().trim();
-
-    // get all the data
     if (lowerQuery === "select * from customers;") {
       return data;
-
-      // get the specific data
     } else if (
       lowerQuery.includes("select") &&
       lowerQuery.includes("from customers;") &&
@@ -21,8 +17,6 @@ const executeQuery = (query, data) => {
           return acc;
         }, {})
       );
-
-      // use condition where
     } else if (lowerQuery.includes("where")) {
       const selectMatch = query.match(/select (.+?) from customers/i);
       const columns = selectMatch[1].split(",").map((col) => col.trim());
@@ -45,8 +39,6 @@ const executeQuery = (query, data) => {
           }, {})
         );
       }
-
-      // implementation of order by
     } else if (lowerQuery.includes("order by")) {
       const selectMatch = query.match(/select (.+?) from customers/i);
       const columns = selectMatch[1].split(",").map((col) => col.trim());
@@ -73,19 +65,6 @@ const executeQuery = (query, data) => {
           }, {})
         );
       }
-
-      // implemented count function
-    } else if (lowerQuery.includes("count(")) {
-      const columnMatch = query.match(/count\((.+?)\)/i);
-      const column = columnMatch[1].trim();
-
-      const countValue = data.reduce((count, item) => {
-        return item[column] ? count + 1 : count;
-      }, 0);
-
-      return [{ [`count(${column})`]: countValue }];
-
-      // unsupported query
     } else {
       throw new Error("Unsupported query format");
     }

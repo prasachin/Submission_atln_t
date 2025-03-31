@@ -3,6 +3,7 @@ import MainContext from "../../../MainContext";
 import toast from "react-hot-toast";
 
 const EditorPanel = ({ onRun }) => {
+  
   const { query, setQuery, setQueryHistory } = useContext(MainContext);
 
   const handleSaveQuery = useCallback(() => {

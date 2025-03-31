@@ -15,7 +15,7 @@ const Home = () => {
     {
       title: "About Us",
       description: "Learn more about our mission.",
-      link: "/about",
+      link: "https://ask.atlan.com/hc/en-us/articles/4414501915025-Customer-support",
     },
     {
       title: "Visit GitHub",

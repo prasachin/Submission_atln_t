@@ -11,9 +11,12 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   const links = [
     { title: "Home", link: "/" },
     { title: "SQL Editor", link: "/editor" },
-    { title: "Contact Us", link: "/contact" },
+    {
+      title: "Contact Us",
+      link: "https://ask.atlan.com/hc/en-us/articles/4414501915025-Customer-support",
+    },
     { title: "Login", link: "/login" },
-    { title: "Github", link: "https://github.com/prasachin" },
+    { title: "Github", link: "https://github.com/prasachin/Submission_atln_t" },
   ];
 
   const handleScroll = () => {
@@ -74,7 +77,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                     {link.title}
                   </Link>
                 )}
-                <div className="underline"></div>
               </li>
             ))}
           </ul>
