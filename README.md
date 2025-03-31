@@ -1,4 +1,5 @@
 # Task given by Atlan after Assessment round for the Frontend intern position.
+<strong>The application is developed using React-javascript ans CSS</strong>
 <strong> Link to the application:https://submission-sachin-prakashs-projects.vercel.app/</strong>
 <br>
 ## Introduction
